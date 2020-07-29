@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="light.css" id="mode">
+</head>
+<body>
+    <div class="main">
+        <form name="myForm">
+            <input type="text" name="textview" class="textview" disabled/>
+        </form>
+    <table>
+        <tr>
+            <td><input type="button" class="button symbol blue" onclick="clean()" value="C"></td>
+            <td><input type="button" class="button symbol blue" onclick="back()" value="⌫"></td>
+            <td><input type="button" class="button symbol blue" onclick="insertOp('/')" value="÷"></td>
+            <td><input type="button" class="button symbol blue" onclick="insertOp('*')" value="x"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="button number gray" onclick="insertNum(7)" value="7"></td>
+            <td><input type="button" class="button number gray" onclick="insertNum(8)" value="8"></td>
+            <td><input type="button" class="button number gray" onclick="insertNum(9)" value="9"></td>
+            <td><input type="button" class="button symbol blue" onclick="insertOp('-')" value="-"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="button number gray" onclick="insertNum(4)" value="4"></td>
+            <td><input type="button" class="button number gray" onclick="insertNum(5)" value="5"></td>
+            <td><input type="button" class="button number gray" onclick="insertNum(6)" value="6"></td>
+            <td><input type="button" class="button symbol blue" onclick="insertOp('+')" value="+"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="button number gray" onclick="insertNum(1)" value="1"></td>
+            <td><input type="button" class="button number gray" onclick="insertNum(2)" value="2"></td>
+            <td><input type="button" class="button number gray" onclick="insertNum(3)" value="3"></td>
+            <td rowspan=2><input style="height: 104.6px;"type="button" class="button symbol blue" onclick="equalTo()" value="="></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input style="width: 127.8px;" type="button" class="button number gray" onclick="insertNum(0)" value="0"></td>
+            <td><input type="button" class="button symbol gray" value="."></td>
+        </tr>
+    </table>
+    <button id="dark" class="dark" onclick="themeSwitcher()">Dark Mode</button>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
